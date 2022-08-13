@@ -696,8 +696,6 @@ if (window.innerWidth >= "800" && !Navigation[6].classList.contains("Active") &&
 
 }
 (window.onresize = () => {
-    console.log(window.screen.width)
-    console.log(window.innerWidth)
     if (window.screen.width!==window.innerWidth)
   {  if (window.innerWidth < 800) {
         MainHeaderUl.className = `MainHeader_navigation_Burger`;
