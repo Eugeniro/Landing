@@ -1259,6 +1259,7 @@ p {
   margin: 40px 20px 210px;
   -webkit-animation: showIMG 0.7s forwards;
   animation: showIMG 0.7s forwards;
+  text-align:center;
 }
 
 .News_body_Play img {
