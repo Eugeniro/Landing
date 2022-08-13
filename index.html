@@ -9,37 +9,36 @@
 </head>
 
 <body>
-    <header id="_Header">
-            <div class="MainHeader">
-                <div class="MainHeader_Logo">Bouncy</div>
-                <nav>
-                    <ul class="MainHeader_navigation">
-                        <li><a href="#top">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+    <header class="Header">
+        <div class="MainHeader">
+            <div class="MainHeader_Logo">Bouncy</div>
+            <nav>
+                <ul class="MainHeader_navigation">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Portfolio</li>
+                    <li>Team</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="top" class="Top">
+            <div class="Top_text">
+                <h1>we are code cafe</h1>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus ero eos et accusamus et iusto odio
+                    dignissimos
+                    ducimus </p>
             </div>
+            <div class="Top_button">
+                <span class="Top_button_ArrowLeft"></span>
+                <span class="Top_button_ArrowRight"></span>
+            </div>
+        </div>
     </header>
-    <div class="Head_img">
-    </div>
-    <div id="top" class="Top">
-        <div class="Top_text">
-            <h1>we are code cafe</h1>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus ero eos et accusamus et iusto odio dignissimos
-                ducimus </p>
-        </div>
-        <div class="Top_button">
-            <span class="Top_button_ArrowLeft"></span>
-            <span class="Top_button_ArrowRight"></span>
-        </div>
-    </div>
     <div class="Container_Body">
-        <div id="about" class="About">
+        <section class="About">
             <div class="Sub_About">
                 <div class=" About_text">
                     <h2 class="GeneralHead">This is Bouncy</h2>
@@ -51,78 +50,143 @@
                         quos distinctio laboriosam facere, cumque alias hic et nobis provident.</p>
                     <button class="About_button GeneralButton">Read More</button>
                 </div>
-                <div> <img src="images/IPAD.png" alt="ipad"></div>
+                <picture>
+                    <source type="image/avif"
+                        srcset="images/IPAD.avif 1x,images/IPAD@2x.avif 2x,images/IPAD@3x.avif 3x">
+                    <source type="image/webp"
+                        srcset="images/IPAD.webp 1x,images/IPAD@2x.webp 2x,images/IPAD@3x.webp 3x">
+                    <img src="images/IPAD.png" srcset="images/IPAD@2x.png 2x,images/IPAD@3x.png 3x" alt="ipad">
+                </picture>
             </div>
-        </div>
-        <div class="DetailAbout">
+        </section>
+        <section class="DetailAbout">
+            <div class="DetailAbout_container">
+                <div class="GeneralHeader">
+                    <h2 class="GeneralHead">Details about as</h2>
+                    <p>Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Officia repellat laudantium culpa.</p>
+                    <div class="DetailAbout_head_list">
+                        <div class="Item ActiveItem">
+                            <picture>
+                                <source type="image/webp" srcset="images/icons/Heart.webp">
+                                <img src="images/icons/Heart.png" alt="heart">
+                            </picture>
+                        </div>
+                        <div class="Item">
+                            <picture>
+                                <source type="image/webp" srcset="images/icons/Mouse.webp">
+                                <img src="images/icons/Mouse.png" alt="Mouse">
+                            </picture>
+                        </div>
+                        <div class="Item">
+                            <picture>
+                                <source type="image/webp" srcset="images/icons/Lamp.webp">
+                                <img src="images/icons/Lamp.png" alt="Lamp">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="DetailAbout_Text">
+                    <div class="DetailAbout_Text_Fist">
+                        <h3>Creative ideas</h3>
+                        <p>Lorem <span class="greenText">ipsum</span> dolor sit, amet consectetur adipisicing elit.
+                            Doloremque ipsa autem quis delectus quidem praesentium consequatur.
+                            Delectus, quis optio <span class="BoldText">quasi</span> , mollitia sint pariatur repellat
+                            adipisci similique ad, perferendis cum. Temporibus.</p>
+                    </div>
+                    <div class="DetailAbout_Text_Second">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Minima ipsum <span class="BoldText"> eum voluptatem</span> amet optio officia quia
+                            reprehenderit <span class="greenText">pariatur</span> , corporis quos error vel quis
+                            commodi modi necessitatibus. Mollitia deleniti doloremque fugiat.
+                            orem ipsum dolor sit amet <span class="BoldText">consectetur</span> adipisicing
+                            elit. Minima ipsum eum voluptatem amet optio officia quia
+                            reprehenderit <span class="BoldText">pariatur</span> , corporis quos error</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Future">
             <div class="GeneralHeader">
-                <h2>Details about as</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Officia repellat laudantium culpa.</p>
-                <div class="DetailAbout_head_list">
-                    <div class="Item ActiveItem"><img src="images/Heart.png" alt="heart"></div>
-                    <div class="Item"><img src="images/Mouse.png" alt="mouse"></div>
-                    <div class="Item"><img src="images/Lamp.png" alt="lamp"></div>
-                </div>
-            </div>
-            <div class="DetailAbout_Text">
-                <div class="DetailAbout_Text_Fist">
-                    <h3>Creative ideas</h3>
-                    <p>Lorem <span class="greenText">ipsum</span> dolor sit, amet consectetur adipisicing elit.
-                        Doloremque ipsa autem quis delectus quidem praesentium consequatur.
-                        Delectus, quis optio <span class="BoldText">quasi</span> , mollitia sint pariatur repellat
-                        adipisci similique ad, perferendis cum. Temporibus.</p>
-                </div>
-                <div class="DetailAbout_Text_Second">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Minima ipsum <span class="BoldText"> eum voluptatem</span> amet optio officia quia
-                        reprehenderit <span class="greenText">pariatur</span> , corporis quos error vel quis
-                        commodi modi necessitatibus. Mollitia deleniti doloremque fugiat.
-                        orem ipsum dolor sit amet <span class="BoldText">consectetur</span> adipisicing
-                        elit. Minima ipsum eum voluptatem amet optio officia quia
-                        reprehenderit <span class="BoldText">pariatur</span> , corporis quos error</p>
-                </div>
-            </div>
-        </div>
-        <div class="Future">
-            <div class="GeneralHeader">
-                <h2>FEATURED PROJECTS</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium accusantium impedit.
+                <h2 class="GeneralHead">FEATURED PROJECTS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium accusantium impedit.
                     Obcaecati numquam eligendi.</p>
             </div>
             <div class="Future_img">
-                <div>
-                    <div class="Img_Shadow">Design</div><img class="Future_img_list" src="images/FutureOne.png" alt="">
+                <div class="Future_img_item">
+                    <div class="Img_Shadow">Design</div>
+                    <picture class="Future_img_list">
+                        <source type="image/avif"
+                            srcset="images/FutureOne.avif 1x,images/FutureOne@2x.avif 2x,images/FutureOne@3x.avif 3x">
+                        <source type="image/webp"
+                            srcset="images/FutureOne.webp 1x,images/FutureOne@2x.webp 2x,images/FutureOne@3x.webp 3x">
+                        <img src="images/FutureOne.jpg" srcset="images/FutureOne@2x.jpg 2x,images/FutureOne@3x.jpg 3x"
+                            alt="FutureOne">
+                    </picture>
                 </div>
-                <div>
-                    <div class="Img_Shadow">Vintage</div> <img class="Future_img_list" src="images/FutureTwo.jpg"
-                        alt="">
+                <div class="Future_img_item">
+                    <div class="Img_Shadow">Vintage</div>
+                    <picture class="Future_img_list">
+                        <source type="image/avif"
+                            srcset="images/FutureTwo.avif 1x,images/FutureTwo@2x.avif 2x,images/FutureTwo@3x.avif 3x">
+                        <source type="image/webp"
+                            srcset="images/FutureTwo.webp 1x,images/FutureTwo@2x.webp 2x,images/FutureTwo@3x.webp 3x">
+                        <img src="images/FutureTwo.jpg" srcset="images/FutureTwo@2x.jpg 2x,images/FutureTwo@3x.jpg 3x"
+                            alt="FutureTwo">
+                    </picture>
                 </div>
-                <div>
-                    <div class="Img_Shadow">Branding</div> <img class="Future_img_list" src="images/FutureThree.jpg"
-                        alt="">
+                <div class="Future_img_item">
+                    <div class="Img_Shadow">Branding</div>
+                    <picture class="Future_img_list">
+                        <source type="image/avif"
+                            srcset="images/FutureThree.avif 1x,images/FutureThree@2x.avif 2x,images/FutureThree@3x.avif 3x">
+                        <source type="image/webp"
+                            srcset="images/FutureThree.webp 1x,images/FutureThree@2x.webp 2x,images/FutureThree@3x.webp 3x">
+                        <img src="images/FutureThree.jpg"
+                            srcset="images/FutureThree@2x.jpg 2x,images/FutureThree@3x.jpg 3x" alt="FutureThree">
+                    </picture>
                 </div>
             </div>
             <div class="Future_submit">
-                <div>
+                <div class="Future_submit_body">
                     <p>Lorem ipsum dolor sit amet consectetur <span>adipisicing</span> elit. Perferendis dignissimos
                         sequi cumque rem iste iusto in natus.</p>
                     <button class="GeneralButton">Submit now</button>
                 </div>
             </div>
-        </div>
-        <div id="services" class="Services">
+        </section>
+        <section class="Services">
             <div class="GeneralHeader">
-                <h2>Our Services</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium accusantium impedit.
+                <h2 class="GeneralHead">Our Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium accusantium impedit.
                     Obcaecati numquam eligendi.</p>
             </div>
             <div class="Services_About">
                 <div class="Services_About_List">
-                    <div class="Item"><img src="images/tools.png" alt="item"></div>
-                    <div class="Item ActiveItem"><img src="images/Brash.png" alt="item"></div>
-                    <div class="Item GamePad"><img src="images/GamePad.png" alt="item"></div>
-                    <div class="Item fork"><img src="images/Fork.png" alt="item"></div>
+                    <div class="Item">
+                        <picture>
+                            <source type="image/webp" srcset="images/icons/tools.webp">
+                            <img src="images/icons/tools.png" alt="tools">
+                        </picture>
+                    </div>
+                    <div class="Item ActiveItem">
+                        <picture>
+                            <source type="image/webp" srcset="images/icons/Brash.webp">
+                            <img src="images/icons/Brash.png" alt="Brash">
+                        </picture>
+                    </div>
+                    <div class="Item GamePad">
+                        <picture>
+                            <source type="image/webp" srcset="images/icons/GamePad.webp">
+                            <img src="images/icons/GamePad.png" alt="GamePad">
+                        </picture>
+                    </div>
+                    <div class="Item fork">
+                        <picture>
+                            <source type="image/webp" srcset="images/icons/Fork.webp">
+                            <img src="images/icons/Fork.png" alt="Fork">
+                        </picture>
+                    </div>
                 </div>
                 <div class="Services_About_Text">
                     <h3>Graphic Design</h3>
@@ -138,35 +202,39 @@
                 </div>
                 <div class="Services_About_Percent">
                     <div class="Services_About_Percent_Circle">
-                        <div class="circle">
-                            <div class="circlePers Eith"></div>
-                            <div class="mcircle">
-                                80<span>%</span>
-                            </div>
+                        <div class="circle_item">
+                            <div class="circle">
+                                <div class="circlePers Eith"></div>
+                                <div class="mcircle">
+                                    80<span>%</span>
+                                </div>
 
-                        </div>
-                        <div class="circle">
-                            <div class="circlePers Sev"></div>
-                            <div class="mcircle">
-                                75<span>%</span>
                             </div>
+                            <p>Branding</p>
                         </div>
-                        <div class="circle">
-                            <div class="circlePers Six"></div>
-                            <div class="mcircle">
-                                60 <span>%</span>
+                        <div class="circle_item">
+                            <div class="circle">
+                                <div class="circlePers Sev"></div>
+                                <div class="mcircle">
+                                    75<span>%</span>
+                                </div>
                             </div>
+                            <p>Web Design</p>
                         </div>
-                    </div>
-                    <div class="Services_About_Percent_Text">
-                        <p>Branding</p>
-                        <p>Web Design</p>
-                        <p>Ul/UX</p>
+                        <div class="circle_item">
+                            <div class="circle">
+                                <div class="circlePers Six"></div>
+                                <div class="mcircle">
+                                    60 <span>%</span>
+                                </div>
+                            </div>
+                            <p>Ul/UX</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="Impressed">
+        </section>
+        <section class="Impressed">
             <div class="Impressed_about">
                 <h2>Impressed ?</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur
@@ -177,11 +245,11 @@
                 <h3>- Sidney</h3>
                 <h4>Creative Director,<span class="greenText"> Code Cafe</span> </h4>
             </div>
-        </div>
-        <div id="portfolio" class="Portfolio">
+        </section>
+        <section class="Portfolio">
             <div class="GeneralHeader">
-                <h2>The portfolio</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui sequi
+                <h2 class="GeneralHead">The portfolio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui sequi
                     ducimus.</p>
             </div>
             <nav class="Portfolio_Navigation">
@@ -195,36 +263,375 @@
                     <li>WordPress</li>
                 </ul>
             </nav>
-            <div class="Portfolio_Grid">
-                <div class="Grid_Item_1"><img src="images/portfolio/Layer 86.png" alt="Pic"></div>
-                <div class="Grid_Item_2"><img src="images/portfolio/Layer 87.png" alt="Pic"></div>
-                <div class="Grid_Item_3"><img src="images/portfolio/Layer 91.png" alt="Pic"></div>
-                <div class="Grid_Item_4"><img src="images/portfolio/Layer 88.png" alt="Pic"></div>
-                <div class="Grid_Item_5"><img src="images/portfolio/Layer 90.png" alt="Pic"></div>
-                <div class="Grid_Item_6"><img src="images/portfolio/Layer 95.png" alt="Pic"></div>
-                <div class="Grid_Item_7"><img src="images/portfolio/HOVER.png" alt="Pic"></div>
-                <div class="Grid_Item_8"><img src="images/portfolio/Layer 93.png" alt="Pic"></div>
-                <div class="Grid_Item_9"><img src="images/portfolio/Layer 92.png" alt="Pic"></div>
-                <div class="Grid_Item_10"><img src="images/portfolio/Layer_96.png" alt="Pic"></div>
-                <div class="Grid_Item_11"><img src="images/portfolio/Layer 94.png" alt="Pic"></div>
-                <div class="Grid_Item_12"><img src="images/portfolio/Layer_97.png" alt="Pic"></div>
+            <div class="Portfolio_body">
+                <div class="Portfolio_body_item">
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_86.avif 1x,images/portfolio/Layer_86@2x.avif 2x,images/portfolio/Layer_86@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_86.webp 1x,images/portfolio/Layer_86@2x.webp 2x,images/portfolio/Layer_86@3x.webp 3x">
+                            <img src="images/portfolio/Layer_86.jpg" srcset="images/portfolio/Layer_86@2x.jpg 2x,images/portfolio/Layer_86@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                        <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quos voluptatibus
+                                    dolore veritatis magni, repellat ea delectus obcaecati unde neque!</p>
+                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+
+                            <source type="image/avif" srcset="images/portfolio/Layer_90.avif 1x,images/portfolio/Layer_90@2x.avif 2x,images/portfolio/Layer_90@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_90.webp 1x,images/portfolio/Layer_90@2x.webp 2x,images/portfolio/Layer_90@3x.webp 3x">
+                            <img src="images/portfolio/Layer_90.jpg" srcset="images/portfolio/Layer_90@2x.jpg 2x,images/portfolio/Layer_90@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                        <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_92.avif 1x,images/portfolio/Layer_92@2x.avif 2x,images/portfolio/Layer_92@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_92.webp 1x,images/portfolio/Layer_92@2x.webp 2x,images/portfolio/Layer_92@3x.webp 3x">
+                            <img src="images/portfolio/Layer_92.jpg" srcset="images/portfolio/Layer_92@2x.jpg 2x,images/portfolio/Layer_92@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                       <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Portfolio_body_item">
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_87.avif 1x,images/portfolio/Layer_87@2x.avif 2x,images/portfolio/Layer_87@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_87.webp 1x,images/portfolio/Layer_87@2x.webp 2x,images/portfolio/Layer_87@3x.webp 3x">
+                            <img src="images/portfolio/Layer_87.jpg" srcset="images/portfolio/Layer_87@2x.jpg 2x,images/portfolio/Layer_87@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                        <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_95.avif 1x,images/portfolio/Layer_95@2x.avif 2x,images/portfolio/Layer_95@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_95.webp 1x,images/portfolio/Layer_95@2x.webp 2x,images/portfolio/Layer_95@3x.webp 3x">
+                            <img src="images/portfolio/Layer_95.jpg" srcset="images/portfolio/Layer_95@2x.jpg 2x,images/portfolio/Layer_95@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                       <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_96.avif 1x,images/portfolio/Layer_96@2x.avif 2x,images/portfolio/Layer_96@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_96.webp 1x,images/portfolio/Layer_96@2x.webp 2x,images/portfolio/Layer_96@3x.webp 3x">
+                            <img src="images/portfolio/Layer_96.jpg" srcset="images/portfolio/Layer_96@2x.jpg 2x,images/portfolio/Layer_96@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                        <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Portfolio_body_item">
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_91.avif 1x,images/portfolio/Layer_91@2x.avif 2x,images/portfolio/Layer_91@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_91.webp 1x,images/portfolio/Layer_91@2x.webp 2x,images/portfolio/Layer_91@3x.webp 3x">
+                            <img src="images/portfolio/Layer_91.jpg" srcset="images/portfolio/Layer_91@2x.jpg 2x,images/portfolio/Layer_91@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                         <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/HOVER.avif 1x,images/portfolio/HOVER@2x.avif 2x,images/portfolio/HOVER@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/HOVER.webp 1x,images/portfolio/HOVER@2x.webp 2x,images/portfolio/HOVER@3x.webp 3x">
+                            <img src="images/portfolio/HOVER.jpg" srcset="images/portfolio/HOVER@2x.jpg 2x,images/portfolio/HOVER@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                         <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_94.avif 1x,images/portfolio/Layer_94@2x.avif 2x,images/portfolio/Layer_94@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_94.webp 1x,images/portfolio/Layer_94@2x.webp 2x,images/portfolio/Layer_94@3x.webp 3x">
+                            <img src="images/portfolio/Layer_94.jpg" srcset="images/portfolio/Layer_94@2x.jpg 2x,images/portfolio/Layer_94@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                         <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Portfolio_body_item">
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_88.avif 1x,images/portfolio/Layer_88@2x.avif 2x,images/portfolio/Layer_88@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_88.webp 1x,images/portfolio/Layer_88@2x.webp 2x,images/portfolio/Layer_88@3x.webp 3x">
+                            <img src="images/portfolio/Layer_88.jpg" srcset="images/portfolio/Layer_88@2x.jpg 2x,images/portfolio/Layer_88@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                         <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_93.avif 1x,images/portfolio/Layer_93@2x.avif 2x,images/portfolio/Layer_93@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_93.webp 1x,images/portfolio/Layer_93@2x.webp 2x,images/portfolio/Layer_93@3x.webp 3x">
+                            <img src="images/portfolio/Layer_93.jpg" srcset="images/portfolio/Layer_93@2x.jpg 2x,images/portfolio/Layer_93@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                         <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Portfolio_body_item_photo">
+                        <picture>
+                            <source type="image/avif" srcset="images/portfolio/Layer_97.avif 1x,images/portfolio/Layer_97@2x.avif 2x,images/portfolio/Layer_97@3x.avif 3x">
+                            <source type="image/webp" srcset="images/portfolio/Layer_97.webp 1x,images/portfolio/Layer_97@2x.webp 2x,images/portfolio/Layer_97@3x.webp 3x">
+                            <img src="images/portfolio/Layer_97.jpg" srcset="images/portfolio/Layer_97@2x.jpg 2x,images/portfolio/Layer_97@3x.jpg 3x" alt="Portfolio">
+                        </picture>
+                         <div class="Portfolio_body_item_photo_about_body">
+                            <div class="Portfolio_body_item_photo_about">
+                                <div class="Portfolio_body_item_photo_about_header">
+                                    <h3>Title here</h3>
+                                </div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quos?</p>                                <div class="Portfolio_body_item_photo_about_icon">
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/clip.webp">
+                                            <img src="images/icons/clip.png" alt="clip">
+                                        </picture>
+                                    </div>
+                                    <div class="Item">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/icons/Heart.webp">
+                                            <img src="images/icons/Heart.png" alt="heart">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="Portfolio_footer">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perferendis dignissimos sequi <span>cumque</span> rem iste iusto in natus.</p>
                 <button class="GeneralButton">Start Project</button>
             </div>
-        </div>
-        <div id="team" class="Team">
+        </section>
+        <section class="Team">
             <div class="Sub_Team">
                 <div class="GeneralHeader">
-                    <h2>The Team</h2>
-                    <p class="GeneralHead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui sequi
+                    <h2 class="GeneralHead">The Team</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui sequi
                         ducimus.</p>
                 </div>
                 <div class="Team_About">
                     <div class="Team_About_Img">
-                        <img src="images/sid.jfif" alt="Sid">
+                        <picture>
+                            <source type="image/avif" srcset="images/sid.avif 1x,images/sid@2x.avif 2x,images/sid@3x.avif 3x">
+                            <source type="image/webp" srcset="images/sid.webp 1x,images/sid@2x.webp 2x,images/sid@3x.webp 3x">
+                            <img src="images/sid.jpg" srcset="images/sid@2x.jpg 2x,images/sid@3x.jpg 3x" alt="sid">
+                        </picture>
                     </div>
                     <div class="Team_About_Characteristic">
                         <div class="Team_About_Characteristic_Name">
@@ -269,15 +676,21 @@
                     contact us
                 </button>
             </div>
-        </div>
-        <div class="Testimonials">
+        </section>
+        <section class="Testimonials">
             <div class="GeneralHeader">
-                <h2>Testimonials</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit
+                <h2 class="GeneralHead">Testimonials</h2>
+                <p>Lorem ipsum dolor sit
                     amet consectetur adipisicing elit. Obcaecati qui sequi ducimus.</p>
             </div>
             <div class="Testimonials_body">
-                <div class="Testimonials_body_Photo"><img src="images/Manni.jpg" alt="Manfred"></div>
+                <div class="Testimonials_body_Photo">
+                    <picture>
+                        <source type="image/avif" srcset="images/Manni.avif">
+                        <source type="image/webp" srcset="images/Manni.webp">
+                        <img src="images/Manni.jpg" alt="Manfred">
+                    </picture>
+                </div>
                 <div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Omnis, inventore. Nostrum rerum quaerat voluptas similique labore! Possimus tempore minus
@@ -295,14 +708,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="blog" class="News">
+        </section>
+        <section class="News">
             <div class="News_Head">
                 <h2>LATEST NEWS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati qui sequi ducimus.</p>
             </div>
             <div class="News_body">
-                <div>
+                <div class="News_body_content">
                     <div class="News_body_Author">
                         <h2>The trending Landing Pages</h2>
                         <h3>by <span class="greenText">Sidney</span> </h3>
@@ -329,13 +742,12 @@
                         <div class="Team_chose_Item"></div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <div class="OurPrice">
+        </section>
+        <section class="OurPrice">
             <div class="GeneralHeader">
-                <h2>Our Price</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit amet consectetur
+                <h2 class="GeneralHead">Our Price</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati qui sequi ducimus.</p>
             </div>
             <div class="OurPrice_Chose">
@@ -387,11 +799,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="Subscribe">
+        </section>
+        <section class="Subscribe">
             <div class="GeneralHeader">
-                <h2>Subscribe us</h2>
-                <p class="GeneralHead">
+                <h2 class="GeneralHead">Subscribe us</h2>
+                <p>
                     Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati qui sequi ducimus.
                 </p>
@@ -400,35 +812,44 @@
                 <input class="GeneralInput" type="email" name="UserEmail" value="" placeholder="Email Address">
                 <button>Submit</button>
             </form>
-        </div>
-        <div id="contact" class="Contact">
+        </section>
+        <section class="Contact">
             <div class="GeneralHeader">
-                <h2>Contact us</h2>
-                <p class="GeneralHead">Lorem ipsum dolor sit amet consectetur
+                <h2 class="GeneralHead">Contact us</h2>
+                <p >Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati qui sequi ducimus.</p>
             </div>
-            <div class="Contact_Item">
-                <div>
-                    <img src="images/CotntacEmail.png" alt="email">
+            <div class="Contact_content">
+                <div class="Contact_Item">
+                    <picture>
+                        <source type="image/webp" srcset="images/CotntacEmail.webp">
+                        <img src="images/CotntacEmail.jpg" alt="email">         
+                    </picture>
                     <h4>email</h4>
                     <p>hello@codecafe.com</p>
                     <p>personal@codecafe.com</p>
                 </div>
-                <div>
-                    <img src="images/CotntacAdress.png" alt="office">
+                <div class="Contact_Item">
+                    <picture>
+                        <source type="image/webp" srcset="images/CotntacAdress.webp">
+                        <img src="images/CotntacAdress.jpg" alt="office">         
+                    </picture>
                     <h4>our office</h4>
                     <p>Moscow</p>
                     <p>Saint Petersburg</p>
                 </div>
-                <div>
-                    <img src="images/CotntacPhone.png" alt="phone">
+                <div class="Contact_Item">
+                    <picture>
+                        <source type="image/webp" srcset="images/CotntacPhone.webp">
+                        <img src="images/CotntacPhone.jpg" alt="phone">         
+                    </picture>
                     <h4>phone</h4>
                     <p>+790 444 333 213</p>
                     <p>555-666-77</p>
                 </div>
             </div>
-        </div>
-        <div class="ContactUs_Form">
+        </section>
+        <section class="ContactUs_Form">
             <form action="" method="post">
                 <div class="ContactUs_Form_Item">
                     <input class="GeneralInput" name="ContactUsName" value="" placeholder="Your name" type="text">
@@ -438,8 +859,8 @@
                 <textarea name="ContactUsText"></textarea>
                 <button>submit now </button>
             </form>
-        </div>
-        <div class="ContactUs_Map">
+        </section>
+        <section class="ContactUs_Map">
             <div class="ContactUs_Shadow">
                 <span> find us on the map</span>
                 <div class="Top_button">
@@ -447,21 +868,37 @@
                     <span class="Top_button_ArrowRight"></span>
                 </div>
             </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.2631792127577!2d37.61860631593065!3d55.75393028055367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1651341136577!5m2!1sru!2sru"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        </section>
         <footer>
             <div class="Footer_About">
                 <div class="MainHeader_Logo">bouncy</div>
                 <p>Copyright 2015. All rights Reserved</p>
                 <ul>
-                    <li><img src="images/footeriCON/facebook.png" alt=""> </li>
-                    <li><img src="images/footeriCON/twitter.png" alt=""> </li>
-                    <li><img src="images/footeriCON/linkedin.png" alt=""> </li>
-                    <li><img src="images/footeriCON/instagramm.png" alt=""> </li>
-                    <li><img src="images/footeriCON/vimeo.png" alt=""> </li>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="images/footeriCON/facebook.webp">
+                            <img src="images/footeriCON/facebook.png" alt="facebook"> </li>
+                        </picture>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="images/footeriCON/twitter.webp">
+                            <img src="images/footeriCON/twitter.png" alt="twitter"> </li>
+                        </picture>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="images/footeriCON/linkedin.webp">
+                            <img src="images/footeriCON/linkedin.png" alt="linkedin"> </li>
+                        </picture>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="images/footeriCON/instagramm.webp">
+                            <img src="images/footeriCON/instagramm.png" alt="instagramm"> </li>
+                        </picture>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="images/footeriCON/vimeo.webp">
+                            <img src="images/footeriCON/vimeo.png" alt="vimeo"> </li>
+                        </picture>
                 </ul>
             </div>
         </footer>
