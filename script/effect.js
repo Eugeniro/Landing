@@ -1,14 +1,24 @@
+/*header*/
+const _Header = document.querySelector(".MainHeader");
+const HedearLogo = document.querySelector(".MainHeader_Logo");
+const Navigation = document.querySelectorAll('.MainHeader_navigation li')
 const ButtonArrow = document.querySelector(".Top_button");
 const ArrowLeft = document.querySelector(".Top_button_ArrowLeft");
 const ArrowRight = document.querySelector(".Top_button_ArrowRight");
+const MainHeaderUl = document.querySelector(".MainHeader ul");
+/*About*/
 const _About = document.querySelector(".About");
-const DetailAboutItem=document.querySelectorAll('.DetailAbout_head_list div.Item');
-const _Header = document.querySelector("#_Header");
-const Navigation = document.querySelectorAll('.MainHeader_navigation li')
+const DetailAboutItem = document.querySelectorAll('.DetailAbout_head_list .Item');
 const _Contain = document.querySelector(".Container_Body");
+/*SERVISEC*/
+const Services = document.querySelector(".Services");
 const ServicesText = document.querySelector(".Services_About_Text");
-const ServicesList = document.querySelectorAll("div.Services_About_List div.Item")
-const TeamChose = document.querySelectorAll(".Team div.Team_chose_Item")
+const ServicesList = document.querySelectorAll(".Services_About_List .Item")
+/*Portfolio*/
+const Portfolio = document.querySelector(".Portfolio");
+/*Team*/
+const Team = document.querySelector(".Team");
+const TeamChose = document.querySelectorAll(".Team .Team_chose_Item")
 const ImgTeam = document.querySelector(".Team_About_Img");
 const NameTeam = document.querySelector(".Team_About_Characteristic_Name h3");
 const RankTeam = document.querySelector(".Team_About_Characteristic_Name h4");
@@ -16,148 +26,75 @@ const FistSkill = document.querySelector("#FistSkill");
 const SecondSkill = document.querySelector("#SecondSkill");
 const ThirdSkill = document.querySelector("#ThirdSkill");
 const Skill_Item = document.querySelectorAll(".Skill_Item");
-const CommentChose = document.querySelectorAll(".Testimonials div.Team_chose_Item")
+/*Testimonials*/
+const CommentChose = document.querySelectorAll(".Testimonials .Team_chose_Item")
 const CommentPhoto = document.querySelector(".Testimonials_body_Photo")
 const CommentName = document.querySelector(".Testimonials_body h3")
 const CommentJob = document.querySelector(".Testimonials_body h4")
 const CommentComents = document.querySelector(".Testimonials_body p")
-const NewsChose = document.querySelectorAll('div.News_body div.Team_chose_Item')
-const NewsBody = document.querySelector('.News_body>div')
+/*News*/
+const News = document.querySelector(".News");
+const NewsChose = document.querySelectorAll('.News_body .Team_chose_Item')
+const NewsBody = document.querySelector('.News_body_content')
 const NewsHead = document.querySelector('.News_Head')
+/*OurPrice*/
 const OurPriceItem = document.querySelectorAll('.OurPrice_Chose_item')
 const OurPriceChosePrice = document.querySelectorAll('.OurPrice_Chose_Price')
 const OurPriceButton = document.querySelectorAll('.OurPrice_Chose_Price button')
+/*Contact*/
+const ContancMap=document.querySelector(".ContactUs_Map");
 const MapShow = document.querySelector('.ContactUs_Shadow .Top_button')
-const MainHeaderUl = document.querySelector(".MainHeader ul");
-const Services = document.querySelector(".Services");
-const Portfolio = document.querySelector(".Portfolio");
-const Team = document.querySelector(".Team");
-const News = document.querySelector(".News");
 const Contact = document.querySelector(".Contact");
-let OnTop=true;
-let WidthAbout=0;
-
-if (window.screen.width < "800")
- {MainHeaderUl.className=`MainHeader_navigation_Burger`;
-}else MainHeaderUl.className=`MainHeader_navigation`;
-window.onscroll = () => {
-    if (window.pageYOffset > _Header.offsetTop && OnTop) {
-        console.log(`pi`)
-        _Header.style.backgroundColor = "rgba(0,0,0,0.2)";
-        OnTop = false;
-        return
-    } else if (window.pageYOffset === _Header.offsetTop && !OnTop) 
-    {
-        _Header.style.backgroundColor = "";
-        OnTop = true;
-        if(window.screen.width >= "800")
-        {let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 0) {
-                e.classList.remove("Active")
-                AllreadyClear=true;
-            }
-            if (index === 0) e.classList.add("Active")
-            return
-        })}
-    }
-    if (window.screen.width >= "800" && window.pageYOffset >= _About.offsetTop+736-WidthAbout &&
-        window.pageYOffset<_About.offsetTop+836-WidthAbout) 
-    {
-        let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 1) {
-                e.classList.remove("Active");
-                AllreadyClear=true;
-            }
-            if (index === 1) e.classList.add("Active")
-            
-        })
-        return
-    }
-    if (window.screen.width >= "800" && window.pageYOffset >= Services.offsetTop+736-WidthAbout &&
-        window.pageYOffset<Services.offsetTop+836-WidthAbout ) 
-    {
-        let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 2) {
-                e.classList.remove("Active");
-                AllreadyClear=true;
-            }
-            if (index === 2) e.classList.add("Active")
-            
-        })
-        return
-    }
-    if (window.screen.width >= "800" && window.pageYOffset >= Portfolio.offsetTop+736-WidthAbout &&
-        window.pageYOffset<Portfolio.offsetTop+836-WidthAbout ) 
-    {
-        let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 3) {
-                e.classList.remove("Active");
-                AllreadyClear=true;
-            }
-            if (index === 3) e.classList.add("Active")
-            
-        })
-        return
-    }
-    if (window.screen.width >= "800" && window.pageYOffset >= Team.offsetTop+736-WidthAbout &&
-        window.pageYOffset<Team.offsetTop+836-WidthAbout ) 
-    {
-        let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 4) {
-                e.classList.remove("Active");
-                AllreadyClear=true;
-            }
-            if (index === 4) e.classList.add("Active")
-            
-        })
-    }
-    if (window.screen.width >= "800" && window.pageYOffset >= News.offsetTop+736-WidthAbout &&
-        window.pageYOffset<News.offsetTop+836-WidthAbout ) 
-    {
-        let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 5) {
-                e.classList.remove("Active");
-                AllreadyClear=true;
-            }
-            if (index === 5) e.classList.add("Active")
-            
-        })
-        return
-    }
-    if (window.screen.width >= "800" && window.pageYOffset >= Contact.offsetTop+736-WidthAbout &&
-        window.pageYOffset<Contact.offsetTop+836-WidthAbout ) 
-    {
-        let AllreadyClear=false;
-        Navigation.forEach((e,index)=>{
-            if (!AllreadyClear && e.classList.contains("Active") && index != 6) {
-                e.classList.remove("Active");
-                AllreadyClear=true;
-            }
-            if (index === 6) e.classList.add("Active")
-            
-        })
-        return
-    }
-
-}
-window.onresize = ()=>
+/**/
+let OnTop = true;
+let HeightAbout = 0;
+let HeightTop = document.querySelector(".Top").clientHeight;
+let VideoButton=""
+let MapLoaded=false;
+const VideoYou=`<iframe style="width: 100%;height: 350px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&showinfo=0&autoplay=1" title="Отзывы о нас" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+function ClickPlay()
 {
-   if (window.screen.width < "800")
-   {MainHeaderUl.className=`MainHeader_navigation_Burger`;
-   let BurgerLi=document.querySelectorAll(".MainHeader_navigation_Burger li");
-   BurgerLi.forEach((e)=>{
-       if (e.hasAttribute(`class`))e.removeAttribute('class');
-       
-   })
+    NewsBody.innerHTML=VideoYou;
 }
-   else MainHeaderUl.className=`MainHeader_navigation`;
-}
+/*header*/
+if (window.screen.width < "800") {
+    MainHeaderUl.className = `MainHeader_navigation_Burger`;
+} else MainHeaderUl.className = `MainHeader_navigation`;
+HedearLogo.addEventListener("click", () => {
+    window.scrollTo(0, 0)
+})
+Navigation.forEach((elem) => {
+    elem.addEventListener("click", () => {
+        for (let i = 0; i < Navigation.length; i++) {
+            Navigation[i].removeAttribute("class")
+        }
+        switch (elem.innerHTML) {
+            case "Home":
+                window.scrollTo(0, 0)
+                break;
+            case "About":
+                window.scrollTo(0, _About.offsetTop + HeightTop)
+                break;
+            case "Services":
+                window.scrollTo(0, Services.offsetTop + HeightTop)
+                break;
+            case "Portfolio":
+                window.scrollTo(0, Portfolio.offsetTop + HeightTop)
+                break;
+            case "Team":
+                window.scrollTo(0, Team.offsetTop + HeightTop)
+                break;
+            case "Blog":
+                window.scrollTo(0, News.offsetTop + HeightTop)
+                break;
+            case "Contact":
+                window.scrollTo(0, Contact.offsetTop + HeightTop)
+                break;
+
+        }
+    })
+})
+
 DetailAboutItem.forEach((e, index) => {
     switch (index) {
         case 0: e.addEventListener("click", () => {
@@ -194,7 +131,6 @@ DetailAboutItem.forEach((e, index) => {
             return;
     }
 })
-
 ServicesList.forEach((e, index) => {
     switch (index) {
         case 0: e.addEventListener("click", () => {
@@ -284,8 +220,11 @@ TeamChose.forEach((e, index) => {
             Skill_Item[0].className = `Skill_Item ComplBranding`
             Skill_Item[1].className = `Skill_Item ComplDesign`
             Skill_Item[2].className = `Skill_Item ComplUser`
-            ImgTeam.innerHTML = `<img src="images/sid.jfif" alt="Sid">`
-            console.log("ya tut")
+            ImgTeam.innerHTML = `<picture>
+            <source type="image/avif" srcset="images/sid.avif 1x,images/sid@2x.avif 2x,images/sid@3x.avif 3x">
+            <source type="image/webp" srcset="images/sid.webp 1x,images/sid@2x.webp 2x,images/sid@3x.webp 3x">
+            <img src="images/sid.jpg" srcset="images/sid@2x.jpg 2x,images/sid@3x.jpg 3x" alt="Pic">
+        </picture>`
 
         })
             return
@@ -308,7 +247,11 @@ TeamChose.forEach((e, index) => {
             Skill_Item[0].className = `Skill_Item ComplChase`
             Skill_Item[1].className = `Skill_Item ComplPower`
             Skill_Item[2].className = `Skill_Item ComplReaction`
-            ImgTeam.innerHTML = `<img src="images/TheBear.jpg" alt="TheBear">`
+            ImgTeam.innerHTML = `<picture>
+            <source type="image/avif" srcset="images/TheBear.avif 1x,images/TheBear@2x.avif 2x,images/TheBear@3x.avif 3x">
+            <source type="image/webp" srcset="images/TheBear.webp 1x,images/TheBear@2x.webp 2x,images/TheBear@3x.webp 3x">
+            <img src="images/TheBear.jpg" srcset="images/TheBear@2x.jpg 2x,images/TheBear@3x.jpg 3x" alt="TheBear">
+        </picture>`
         })
             return
         case 2: e.addEventListener("click", () => {
@@ -331,7 +274,11 @@ TeamChose.forEach((e, index) => {
             Skill_Item[0].className = `Skill_Item ComplINT`
             Skill_Item[1].className = `Skill_Item ComplCOM`
             Skill_Item[2].className = `Skill_Item ComplDEV`
-            ImgTeam.innerHTML = `<img src="images/sensei.jpg" alt="Sensei">`
+            ImgTeam.innerHTML = `<picture>
+            <source type="image/avif" srcset="images/sensei.avif 1x,images/sensei@2x.avif 2x,images/sensei@3x.avif 3x">
+            <source type="image/webp" srcset="images/sensei.webp 1x,images/sensei@2x.webp 2x,images/sensei@3x.webp 3x">
+            <img src="images/sensei.jpg" srcset="images/sensei@2x.jpg 2x,images/sensei@3x.jpg 3x" alt="sensei">
+        </picture>`
         })
             return
     }
@@ -346,14 +293,17 @@ CommentChose.forEach((e, index) => {
                 }
             })
             e.classList.add("ActiveTeam")
-            CommentPhoto.innerHTML = `<img src="images/Manni.jpg" alt="Manfred">`;
+            CommentPhoto.innerHTML = `    <picture>
+            <source type="image/avif" srcset="images/Manni.avif">
+            <source type="image/webp" srcset="images/Manni.webp">
+            <img src="images/Manni.jpg" alt="Manfred">
+        </picture>`;
             CommentName.innerHTML = `Manfred`;
             CommentJob.innerHTML = `FOUNDER, ARTWAYS BD`;
             CommentComents.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
      Omnis, inventore. Nostrum rerum quaerat voluptas similique labore! Possimus tempore minus quibusdam architecto, 
      exercitationem necessitatibus a delectus ratione 
      laboriosam? Accusamus, provident numquam.`
-            console.log("ya tut")
 
         })
             return
@@ -365,7 +315,11 @@ CommentChose.forEach((e, index) => {
                 }
             })
             e.classList.add("ActiveTeam");
-            CommentPhoto.innerHTML = `<img src="images/sponge.jpeg" alt="Sponge">`;
+            CommentPhoto.innerHTML = `    <picture>
+            <source type="image/avif" srcset="images/sponge.avif">
+            <source type="image/webp" srcset="images/sponge.webp">
+            <img src="images/sponge.jpg" alt="sponge">
+        </picture>`;
             CommentName.innerHTML = `SpongeBob`;
             CommentJob.innerHTML = `Diver`;
             CommentComents.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -381,7 +335,11 @@ CommentChose.forEach((e, index) => {
                 }
             })
             e.classList.add("ActiveTeam");
-            CommentPhoto.innerHTML = `<img src="images/Melman.jpeg" alt="Melman">`;
+            CommentPhoto.innerHTML = `    <picture>
+            <source type="image/avif" srcset="images/Melman.avif">
+            <source type="image/webp" srcset="images/Melman.webp">
+            <img src="images/Melman.jpg" alt="Melman">
+        </picture>`;
             CommentName.innerHTML = `Melman`;
             CommentJob.innerHTML = `travel blogger`;
             CommentComents.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -405,6 +363,11 @@ NewsChose.forEach((e, index) => {
                     return;
                 }
             })
+            if (VideoButton)
+            {
+                VideoButton.removeEventListener("click",ClickPlay)
+                VideoButton="";
+             }
             e.classList.add("ActiveTeam")
             if (NewsBody.classList.contains("News_body_Play")) NewsBody.removeAttribute(`class`)
             NewsHead.innerHTML = ` <h2>LATEST NEWS</h2>
@@ -442,9 +405,15 @@ NewsChose.forEach((e, index) => {
          <p >Lorem ipsum dolor sit amet 
          consectetur adipisicing elit. Obcaecati qui sequi ducimus.</p>`;
             NewsBody.classList.add("News_body_Play")
-            NewsBody.innerHTML = `<div>
-         <img src="images/NewsPlay.png" alt="Play">
+            NewsBody.innerHTML = `<div class="PlayVideo">
+            <picture>
+            <source type="image/avif" srcset="images/NewsPlay.avif">
+            <source type="image/webp" srcset="images/NewsPlay.webp">
+            <img src="images/NewsPlay.png" alt="NewsPlay">
+        </picture>
           </div>`
+          VideoButton=document.querySelector(".PlayVideo");
+        VideoButton.addEventListener("click",ClickPlay)
         })
             return
         case 2: e.addEventListener("click", () => {
@@ -455,6 +424,11 @@ NewsChose.forEach((e, index) => {
                     return;
                 }
             })
+            if (VideoButton)
+            {
+                VideoButton.removeEventListener("click",ClickPlay)
+                VideoButton="";
+             }
             e.classList.add("ActiveTeam");
             if (NewsBody.classList.contains("News_body_Play")) NewsBody.removeAttribute(`class`)
             NewsHead.innerHTML = ` <h2>LATEST NEWS</h2>
@@ -487,16 +461,14 @@ ButtonArrow.addEventListener("click", () => {
         ArrowRight.classList.add("Open");
         _About.classList.add("close")
         _Contain.classList.add("close")
-        WidthAbout=505;
-        console.log(_About.offsetTop)
-        console.log(Services.offsetTop)
+        HeightAbout = 505;
         return;
     }
     ArrowLeft.classList.remove("Open");
     ArrowRight.classList.remove("Open");
     _About.classList.remove("close");
     _Contain.classList.remove("close")
-    WidthAbout=0;
+    HeightAbout = 0;
 })
 MapShow.addEventListener("click", () => {
     document.querySelector('.ContactUs_Shadow').style.display = "none";
@@ -504,7 +476,7 @@ MapShow.addEventListener("click", () => {
 OurPriceItem.forEach((e, index) => {
     e.addEventListener("mouseenter", () => {
 
-        OurPriceChosePrice[index].classList.add("ActivePrice")
+        OurPriceChosePrice[index].style.top=`${e.clientHeight-OurPriceButton[index].clientHeight}px`
         OurPriceButton[index].innerHTML = `lets Start >`
         OurPriceButton[index].style.textTransform = "none"
         OurPriceButton[index].style.boxShadow = "0px -3px 5px black"
@@ -513,8 +485,8 @@ OurPriceItem.forEach((e, index) => {
 })
 OurPriceItem.forEach((e, index) => {
     e.addEventListener("mouseleave", () => {
-        if (OurPriceChosePrice[index].classList.contains("ActivePrice"))
-            OurPriceChosePrice[index].classList.remove("ActivePrice")
+        if (OurPriceChosePrice[index].hasAttribute("style"))
+            OurPriceChosePrice[index].removeAttribute("style")
 
         if (OurPriceButton[index].hasAttribute("style"))
             OurPriceButton[index].removeAttribute("style")
@@ -530,22 +502,219 @@ OurPriceItem.forEach((e, index) => {
     })
 
 })
-MainHeaderUl.addEventListener("click",()=>{
-    if (MainHeaderUl.classList.contains(`MainHeader_navigation_Burger`))
-    {
-        let BurgerLi=document.querySelectorAll(".MainHeader_navigation_Burger li");
-        BurgerLi.forEach((e,index)=>{
-            if( !e.hasAttribute("style"))
-            {
-                e.style.display=`block`;
+MainHeaderUl.addEventListener("click", () => {
+    if (MainHeaderUl.classList.contains(`MainHeader_navigation_Burger`)) {
+        let BurgerLi = document.querySelectorAll(".MainHeader_navigation_Burger li");
+        BurgerLi.forEach((e, index) => {
+            if (!e.hasAttribute("style")) {
+                e.style.display = `block`;
                 return;
-            }else
-            {
-                console.log("no")
+            } else {
                 BurgerLi[index].removeAttribute(`style`)
                 return;
             }
         })
-     
-    }return
+
+    } return
 })
+
+window.onscroll = () => {
+
+    if (window.pageYOffset>ContancMap.offsetTop- HeightAbout-1000 && !MapLoaded)
+    {
+        ContancMap.insertAdjacentHTML("beforeend",` <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.2631792127577!2d37.61860631593065!3d55.75393028055367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1651341136577!5m2!1sru!2sru"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>`)
+        MapLoaded=true;
+    }
+    if (window.pageYOffset > 0 && OnTop) {
+        _Header.style.backgroundColor = "rgba(0,0,0,0.2)";
+        OnTop=false
+        return
+    } else if (window.pageYOffset === 0 && !OnTop) {
+        _Header.style.backgroundColor = "transparent";
+        OnTop=true;
+        if (window.screen.width >= "800") {
+            for (let i = 0; i < Navigation.length; i++) {
+                if (Navigation[i].innerHTML === "Home") 
+                {
+                    if (!Navigation[i].classList.contains("class")) Navigation[i].classList.add("Active")
+                } 
+                else 
+                Navigation[i].removeAttribute("class")
+            }
+        }
+    }
+    if (window.screen.width!==window.innerWidth)
+    {if (window.innerWidth >= "800"&&!Navigation[1].classList.contains("Active") && window.pageYOffset >=_About.offsetTop + HeightTop - HeightAbout &&
+    window.pageYOffset < _About.offsetTop +_About.clientHeight + HeightTop - HeightAbout ) {
+    for (let i = 0; i < Navigation.length; i++) {
+        if (Navigation[i].innerHTML === "About") 
+        {
+            if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+        } 
+        else 
+        Navigation[i].removeAttribute("class")
+    }
+    return
+}
+if (window.innerWidth >= "800" &&!Navigation[2].classList.contains("Active") && window.pageYOffset >= Services.offsetTop + HeightTop - HeightAbout &&
+    window.pageYOffset <Services.offsetTop + Services.clientHeight + HeightTop - HeightAbout) {
+        for (let i = 0; i < Navigation.length; i++) {
+            if (Navigation[i].innerHTML === "Services") 
+            {
+                if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+            } 
+            else 
+            Navigation[i].removeAttribute("class")
+        }
+    return
+}
+if (window.innerWidth >= "800" &&!Navigation[3].classList.contains("Active") && window.pageYOffset >= Portfolio.offsetTop + HeightTop - HeightAbout &&
+    window.pageYOffset < Portfolio.offsetTop + Portfolio.clientHeight + HeightTop - HeightAbout) {
+        for (let i = 0; i < Navigation.length; i++) {
+            if (Navigation[i].innerHTML === "Portfolio") 
+            {
+                if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+            } 
+            else 
+            Navigation[i].removeAttribute("class")
+        }
+    return
+}
+if (window.innerWidth >= "800" &&!Navigation[4].classList.contains("Active") && window.pageYOffset >= Team.offsetTop + HeightTop - HeightAbout &&
+    window.pageYOffset < Team.offsetTop +Team.clientHeight + HeightTop - HeightAbout) {
+        for (let i = 0; i < Navigation.length; i++) {
+            if (Navigation[i].innerHTML === "Team") 
+            {
+                if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+            } 
+            else 
+            Navigation[i].removeAttribute("class")
+        }
+        return
+}
+if (window.innerWidth >= "800" &&!Navigation[5].classList.contains("Active") && window.pageYOffset >= News.offsetTop + HeightTop - HeightAbout &&
+    window.pageYOffset <News.offsetTop + News.clientHeight + HeightTop - HeightAbout) {
+        for (let i = 0; i < Navigation.length; i++) {
+            if (Navigation[i].innerHTML === "Blog") 
+            {
+                if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+            } 
+            else 
+            Navigation[i].removeAttribute("class")
+        }
+    return
+}
+if (window.innerWidth >= "800" && !Navigation[6].classList.contains("Active") &&window.pageYOffset >= Contact.offsetTop + HeightTop - HeightAbout &&
+    window.pageYOffset < Contact.offsetTop +Contact.clientHeight + HeightTop - HeightAbout) {
+        for (let i = 0; i < Navigation.length; i++) {
+            if (Navigation[i].innerHTML === "Contact") 
+            {
+                if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+            } 
+            else 
+            Navigation[i].removeAttribute("class")
+        }
+    return
+}
+
+    }else
+  { if (window.screen.width >= "800"&&!Navigation[1].classList.contains("Active") && window.pageYOffset >=_About.offsetTop + HeightTop - HeightAbout &&
+        window.pageYOffset < _About.offsetTop +_About.clientHeight + HeightTop - HeightAbout ) {
+        for (let i = 0; i < Navigation.length; i++) {
+            if (Navigation[i].innerHTML === "About") 
+            {
+                if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+            } 
+            else 
+            Navigation[i].removeAttribute("class")
+        }
+        return
+    }
+    if (window.screen.width >= "800" &&!Navigation[2].classList.contains("Active") && window.pageYOffset >= Services.offsetTop + HeightTop - HeightAbout &&
+        window.pageYOffset <Services.offsetTop + Services.clientHeight + HeightTop - HeightAbout) {
+            for (let i = 0; i < Navigation.length; i++) {
+                if (Navigation[i].innerHTML === "Services") 
+                {
+                    if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+                } 
+                else 
+                Navigation[i].removeAttribute("class")
+            }
+        return
+    }
+    if (window.screen.width >= "800" &&!Navigation[3].classList.contains("Active") && window.pageYOffset >= Portfolio.offsetTop + HeightTop - HeightAbout &&
+        window.pageYOffset < Portfolio.offsetTop + Portfolio.clientHeight + HeightTop - HeightAbout) {
+            for (let i = 0; i < Navigation.length; i++) {
+                if (Navigation[i].innerHTML === "Portfolio") 
+                {
+                    if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+                } 
+                else 
+                Navigation[i].removeAttribute("class")
+            }
+        return
+    }
+    if (window.screen.width >= "800" &&!Navigation[4].classList.contains("Active") && window.pageYOffset >= Team.offsetTop + HeightTop - HeightAbout &&
+        window.pageYOffset < Team.offsetTop +Team.clientHeight + HeightTop - HeightAbout) {
+            for (let i = 0; i < Navigation.length; i++) {
+                if (Navigation[i].innerHTML === "Team") 
+                {
+                    if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+                } 
+                else 
+                Navigation[i].removeAttribute("class")
+            }
+            return
+    }
+    if (window.screen.width >= "800" &&!Navigation[5].classList.contains("Active") && window.pageYOffset >= News.offsetTop + HeightTop - HeightAbout &&
+        window.pageYOffset <News.offsetTop + News.clientHeight + HeightTop - HeightAbout) {
+            for (let i = 0; i < Navigation.length; i++) {
+                if (Navigation[i].innerHTML === "Blog") 
+                {
+                    if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+                } 
+                else 
+                Navigation[i].removeAttribute("class")
+            }
+        return
+    }
+    if (window.screen.width >= "800" && !Navigation[6].classList.contains("Active") &&window.pageYOffset >= Contact.offsetTop + HeightTop - HeightAbout &&
+        window.pageYOffset < Contact.offsetTop +Contact.clientHeight + HeightTop - HeightAbout) {
+            for (let i = 0; i < Navigation.length; i++) {
+                if (Navigation[i].innerHTML === "Contact") 
+                {
+                    if (!Navigation[i].classList.contains("Active")) Navigation[i].classList.add("Active")
+                } 
+                else 
+                Navigation[i].removeAttribute("class")
+            }
+        return
+    }}
+
+}
+(window.onresize = () => {
+    console.log(window.screen.width)
+    console.log(window.innerWidth)
+    if (window.screen.width!==window.innerWidth)
+  {  if (window.innerWidth < 800) {
+        MainHeaderUl.className = `MainHeader_navigation_Burger`;
+        let BurgerLi = document.querySelectorAll(".MainHeader_navigation_Burger li");
+        BurgerLi.forEach((e) => {
+            if (e.hasAttribute(`class`)) e.removeAttribute('class');
+
+        })
+    }else MainHeaderUl.className = `MainHeader_navigation`
+}else 
+   { if (window.screen.width < "800") {
+        MainHeaderUl.className = `MainHeader_navigation_Burger`;
+        let BurgerLi = document.querySelectorAll(".MainHeader_navigation_Burger li");
+        BurgerLi.forEach((e) => {
+            if (e.hasAttribute(`class`)) e.removeAttribute('class');
+
+        })
+    }
+    else MainHeaderUl.className = `MainHeader_navigation`;}
+})()
